@@ -473,24 +473,101 @@
     .section-header .divider { margin: 16px auto 0; }
 
     /* ─── Responsive ─── */
+
+    /* Tablet: ≤ 900px */
     @media (max-width: 900px) {
+      .wrap { padding: 0 20px; }
       .section { padding: 80px 0; }
-      .categories-grid { grid-template-columns: repeat(2, 1fr); }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .about-inner { grid-template-columns: 1fr; gap: 48px; }
-      .contact-inner { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .section-header { margin-bottom: 48px; }
+
+      /* Nav */
       .nav-links { display: none; }
+      .nav-wa   { display: none; }
       .hamburger { display: flex; }
-      .nav-wa { display: none; }
+
+      /* Grids */
+      .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .services-grid   { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .reviews-grid    { grid-template-columns: 1fr; }
+
+      /* About */
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-right { flex-direction: column-reverse; }
+      .shop-photos img:first-child { height: 220px; }
+      .shop-photos img { height: 140px; }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; gap: 32px; }
+      .map-wrap { height: 320px; }
+
+      /* Footer */
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-tagline { max-width: 100%; }
     }
+
+    /* Mobile: ≤ 600px */
     @media (max-width: 600px) {
-      .categories-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .hero-title { font-size: 44px; }
-      .section-header { margin-bottom: 40px; }
+      .wrap { padding: 0 16px; }
+      .section { padding: 64px 0; }
+      .section-header { margin-bottom: 36px; }
+
+      /* Hero */
+      .hero-content { padding: 0 16px; }
+      .hero-badge { font-size: 10px; padding: 6px 14px; margin-bottom: 20px; }
+      .hero-title { font-size: 40px; letter-spacing: -.02em; margin-bottom: 16px; }
+      .hero-subtitle { font-size: 15px; margin-bottom: 32px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; gap: 10px; }
+      .hero-ctas .btn { justify-content: center; width: 100%; }
+      .hero-scroll { display: none; }
+
+      /* Grids → single column */
+      .categories-grid { grid-template-columns: 1fr; gap: 12px; }
+      .services-grid   { grid-template-columns: 1fr; gap: 12px; }
+
+      /* Cards */
+      .cat-card  { padding: 24px 20px; }
+      .svc-card  { padding: 24px 20px; }
+      .review-card { padding: 24px 20px; }
+
+      /* Brand cards */
+      .brands-row { gap: 10px; }
+      .brand-card { min-width: 72px; padding: 14px 12px; }
+      .brand-card img { width: 30px; height: 30px; }
+      .brand-card span { font-size: 11px; }
+
+      /* About */
+      .about-desc { font-size: 15px; }
+      .about-ctas { flex-direction: column; }
+      .about-ctas .btn { justify-content: center; text-align: center; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .stat-card { padding: 20px 12px; }
+      .stat-value { font-size: 32px; }
+      .shop-photos { gap: 8px; }
+      .shop-photos img:first-child { height: 180px; }
+      .shop-photos img { height: 110px; }
+
+      /* Contact */
+      .map-wrap { height: 260px; }
+      .contact-ctas { flex-direction: column; }
+      .contact-ctas .btn { width: 100%; justify-content: center; flex: unset; }
+      .info-card { padding: 18px; }
+      .info-card-value { font-size: 14px; }
+
+      /* Footer */
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      footer { padding: 48px 0 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+
+      /* Buttons */
+      .btn { padding: 13px 22px; font-size: 14px; }
+    }
+
+    /* Very small: ≤ 380px */
+    @media (max-width: 380px) {
+      .hero-title { font-size: 34px; }
+      .heading { font-size: 28px; }
+      .stat-value { font-size: 28px; }
+      .nav-logo-name { display: none; }
     }
 
     /* ─── RTL tweaks ─── */
