@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bait Shabib Mobile Phone | Dubai</title>
+  <meta name="description" content="Premium smartphones, accessories & expert repair services in Bur Dubai. Open daily from 10AM." />
+  <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ─── Variables ─── */
+    :root {
+      --red: #F60F13;
+      --red-d: #cc0a0d;
+      --dark: #1D1D1F;
+      --darker: #0A0A0A;
+      --light: #F5F5F7;
+      --white: #FFFFFF;
+      --gray: #494949;
+      --muted: #86868B;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 2px 20px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 40px rgba(0,0,0,0.10);
+      --shadow-lg: 0 24px 64px rgba(0,0,0,0.14);
+      --r: 20px;
+      --r-sm: 12px;
+    }
+
+    /* ─── Base ─── */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    html[dir="rtl"] body { font-family: 'Cairo', 'Segoe UI', sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
+
+    /* ─── Layout ─── */
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 112px 0; }
+
+    /* ─── Typography ─── */
+    .badge {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--red); background: rgba(246,15,19,.1);
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 16px;
+    }
+    .heading {
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 800; line-height: 1.08; letter-spacing: -.02em;
+    }
+    .subheading {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted); margin-top: 12px; font-weight: 400;
+    }
+    .section-header { text-align: center; margin-bottom: 64px; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 100px;
+      font-size: 15px; font-weight: 600;
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-red { background: var(--red); color: #fff; }
+    .btn-red:hover { background: var(--red-d); box-shadow: 0 8px 24px rgba(246,15,19,.35); }
+    .btn-glass {
+      background: rgba(255,255,255,.12); color: #fff;
+      border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(12px);
+    }
+    .btn-glass:hover { background: rgba(255,255,255,.22); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-outline { background: transparent; color: var(--dark); border: 1.5px solid rgba(0,0,0,.18); }
+    .btn-outline:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-wa:hover { background: #1fb85a; box-shadow: 0 8px 24px rgba(37,211,102,.35); }
+
+    /* ─── Navbar ─── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0;
+      transition: background .4s, border-color .4s, padding .3s, backdrop-filter .4s;
+    }
+    .navbar.scrolled {
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+    .navbar .wrap {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+    }
+    .nav-logo img { width: 34px; height: 34px; object-fit: contain; border-radius: 8px; }
+    .nav-logo-name {
+      font-size: 15px; font-weight: 700;
+      color: #fff; transition: color .4s;
+    }
+    .navbar.scrolled .nav-logo-name { color: var(--dark); }
+
+    .nav-links {
+      display: flex; gap: 28px; list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px; font-weight: 500;
+      color: rgba(255,255,255,.85); transition: color .4s;
+    }
+    .navbar.scrolled .nav-links a { color: var(--gray); }
+    .nav-links a:hover { color: var(--red) !important; }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .lang-btn {
+      font-size: 13px; font-weight: 600;
+      padding: 6px 16px; border-radius: 100px;
+      border: 1.5px solid rgba(255,255,255,.3);
+      color: #fff; transition: all .4s;
+    }
+    .navbar.scrolled .lang-btn {
+      border-color: rgba(0,0,0,.15); color: var(--dark);
+    }
+    .lang-btn:hover { background: rgba(255,255,255,.1); }
+    .navbar.scrolled .lang-btn:hover { background: var(--light); }
+
+    .nav-wa {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600;
+      padding: 8px 18px; border-radius: 100px;
+      background: #25D366; color: #fff;
+      transition: background .2s, transform .2s;
+    }
+    .nav-wa:hover { background: #1fb85a; transform: translateY(-1px); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: #fff; border-radius: 2px; transition: all .3s;
+    }
+    .navbar.scrolled .hamburger span { background: var(--dark); }
+
+    /* mobile nav */
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,.97); z-index: 999;
+      flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 28px; font-weight: 700; color: #fff; transition: color .2s;
+    }
+    .mobile-menu a:hover { color: var(--red); }
+    .mobile-menu .close-btn {
+      position: absolute; top: 24px; right: 28px;
+      font-size: 32px; color: #fff; background: none;
+    }
+    .mobile-menu .lang-btn-mobile {
+      font-size: 16px; font-weight: 700;
+      padding: 10px 24px; border-radius: 100px;
+      border: 1.5px solid rgba(255,255,255,.3); color: #fff;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--darker);
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    }
+    .orb {
+      position: absolute; border-radius: 50%; filter: blur(100px);
+      pointer-events: none;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(246,15,19,.35) 0%, transparent 70%);
+      top: -200px; left: -200px;
+      animation: float1 12s ease-in-out infinite;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(246,15,19,.18) 0%, transparent 70%);
+      bottom: -100px; right: -100px;
+      animation: float2 15s ease-in-out infinite;
+    }
+    .orb-3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,80,80,.12) 0%, transparent 70%);
+      top: 40%; left: 55%;
+      animation: float3 18s ease-in-out infinite;
+    }
+    /* subtle grid */
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    @keyframes float1 {
+      0%,100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(60px, 40px) scale(1.05); }
+      66% { transform: translate(-30px, 70px) scale(.95); }
+    }
+    @keyframes float2 {
+      0%,100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-50px, -60px) scale(1.08); }
+    }
+    @keyframes float3 {
+      0%,100% { transform: translate(0, 0); }
+      50% { transform: translate(40px, -40px); }
+    }
+
+    .hero-content {
+      position: relative; z-index: 1;
+      text-align: center; padding: 0 24px; max-width: 860px; margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 7px 18px; border-radius: 100px; margin-bottom: 28px;
+      background: rgba(255,255,255,.05); backdrop-filter: blur(8px);
+      opacity: 0;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 8px var(--red);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .6; transform: scale(.85); }
+    }
+    .hero-title {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 900; line-height: 1.0; letter-spacing: -.035em;
+      color: #fff; margin-bottom: 20px; opacity: 0;
+    }
+    .hero-title .accent { color: var(--red); }
+    .hero-subtitle {
+      font-size: clamp(16px, 2.2vw, 22px);
+      color: rgba(255,255,255,.55); max-width: 560px; margin: 0 auto 40px;
+      font-weight: 400; opacity: 0;
+    }
+    .hero-ctas {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      align-items: center; justify-content: center;
+      opacity: 0;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,.35); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+      z-index: 1; opacity: 0;
+    }
+    .scroll-arrow {
+      width: 20px; height: 20px;
+      border-right: 2px solid rgba(255,255,255,.3);
+      border-bottom: 2px solid rgba(255,255,255,.3);
+      transform: rotate(45deg);
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(5px); }
+    }
+
+    /* ─── Products ─── */
+    .products { background: var(--white); }
+    .categories-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      margin-bottom: 72px;
+    }
+    .cat-card {
+      background: var(--light); border-radius: var(--r);
+      padding: 32px 28px; transition: transform .3s, box-shadow .3s;
+      cursor: default;
+    }
+    .cat-card:hover {
+      transform: translateY(-6px); box-shadow: var(--shadow-lg);
+      background: var(--white);
+    }
+    .cat-icon { font-size: 36px; margin-bottom: 16px; }
+    .cat-name {
+      font-size: 18px; font-weight: 700; margin-bottom: 6px;
+    }
+    .cat-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .brands-section { text-align: center; }
+    .brands-title {
+      font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 28px;
+    }
+    .brands-row {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      align-items: center; justify-content: center;
+    }
+    .brand-card {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      padding: 20px 18px; border-radius: 16px; min-width: 88px;
+      background: var(--light);
+      transition: background .25s, transform .25s, box-shadow .25s;
+      cursor: default;
+    }
+    .brand-card:hover {
+      background: var(--white); transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .brand-card img { width: 38px; height: 38px; object-fit: contain; }
+    .brand-card span { font-size: 12px; font-weight: 600; color: var(--gray); }
+
+    /* ─── Services ─── */
+    .services { background: var(--light); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .svc-card {
+      background: var(--white); border-radius: var(--r);
+      padding: 36px 28px; box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .svc-card:hover {
+      transform: translateY(-6px); box-shadow: var(--shadow-md);
+    }
+    .svc-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(246,15,19,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 20px;
+    }
+    .svc-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .svc-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ─── About ─── */
+    .about { background: var(--dark); color: #fff; }
+    .about-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .about-text .badge { color: rgba(255,255,255,.5); background: rgba(255,255,255,.08); }
+    .about-text .heading { color: #fff; }
+    .about-desc {
+      font-size: 17px; color: rgba(255,255,255,.6);
+      margin-top: 20px; line-height: 1.75;
+    }
+    .about-ctas { margin-top: 36px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .about-right { display: flex; flex-direction: column; gap: 24px; }
+    .stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,.06); border-radius: var(--r-sm);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 28px 24px; text-align: center;
+    }
+    .stat-value {
+      font-size: 42px; font-weight: 800; letter-spacing: -.02em;
+      color: var(--red); display: block;
+    }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,.45); margin-top: 4px; }
+
+    .shop-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; border-radius: var(--r); overflow: hidden; }
+    .shop-photos img { width: 100%; height: 160px; object-fit: cover; }
+    .shop-photos img:first-child { grid-column: 1 / -1; height: 200px; }
+
+    /* ─── Reviews ─── */
+    .reviews { background: var(--white); }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .review-card {
+      background: var(--light); border-radius: var(--r);
+      padding: 32px 28px;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .stars { display: flex; gap: 4px; margin-bottom: 16px; }
+    .star { color: #FFB800; font-size: 18px; }
+    .review-text {
+      font-size: 15px; line-height: 1.7; color: var(--gray);
+      margin-bottom: 20px; font-style: italic;
+    }
+    .reviewer { font-size: 14px; font-weight: 700; color: var(--dark); }
+
+    /* ─── Contact ─── */
+    .contact { background: var(--light); }
+    .contact-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+    }
+    .map-wrap {
+      border-radius: var(--r); overflow: hidden;
+      box-shadow: var(--shadow-md); height: 420px;
+    }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .info-card {
+      background: var(--white); border-radius: var(--r-sm);
+      padding: 24px; box-shadow: var(--shadow);
+    }
+    .info-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .info-card-value { font-size: 16px; font-weight: 600; color: var(--dark); }
+    .info-card-value a { color: var(--red); }
+    .info-card-value a:hover { text-decoration: underline; }
+    .hours-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .hours-row { display: flex; justify-content: space-between; align-items: center; }
+    .hours-day { font-size: 14px; color: var(--muted); }
+    .hours-time { font-size: 14px; font-weight: 600; color: var(--dark); }
+    .contact-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--darker); color: rgba(255,255,255,.55);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; }
+    .footer-logo img { width: 32px; height: 32px; object-fit: contain; border-radius: 7px; }
+    .footer-logo-name { font-size: 15px; font-weight: 700; color: #fff; }
+    .footer-tagline { font-size: 14px; line-height: 1.6; max-width: 280px; }
+    .footer-col-title {
+      font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      color: rgba(255,255,255,.3); margin-bottom: 16px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,.55); transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .social-row { display: flex; gap: 12px; margin-top: 8px; }
+    .social-btn {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, transform .2s;
+    }
+    .social-btn:hover { background: var(--red); transform: translateY(-2px); }
+    .social-btn svg { width: 18px; height: 18px; fill: #fff; }
+    .footer-bottom {
+      padding-top: 28px; display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 8px;
+    }
+    .footer-bottom p { font-size: 13px; }
+
+    /* ─── Divider ─── */
+    .divider {
+      width: 48px; height: 3px; background: var(--red); border-radius: 2px; margin: 16px auto 0;
+    }
+    .section-header .divider { margin: 16px auto 0; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .section { padding: 80px 0; }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-wa { display: none; }
+    }
+    @media (max-width: 600px) {
+      .categories-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .hero-title { font-size: 44px; }
+      .section-header { margin-bottom: 40px; }
+    }
+
+    /* ─── RTL tweaks ─── */
+    html[dir="rtl"] .hero-title { letter-spacing: 0; }
+    html[dir="rtl"] .heading { letter-spacing: 0; }
+    html[dir="rtl"] .footer-tagline { max-width: 100%; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu" aria-label="Close">✕</button>
+  <a href="#products" data-en="Products" data-ar="المنتجات">Products</a>
+  <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+  <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+  <a href="#reviews" data-en="Reviews" data-ar="آراء العملاء">Reviews</a>
+  <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  <button class="lang-btn-mobile" id="langBtnMobile">عربي</button>
+</div>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="wrap">
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="Bait Shabib" />
+      <span class="nav-logo-name" data-en="Bait Shabib" data-ar="بيت شبيب">Bait Shabib</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#products" data-en="Products" data-ar="المنتجات">Products</a></li>
+      <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+      <li><a href="#reviews" data-en="Reviews" data-ar="آراء العملاء">Reviews</a></li>
+      <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn">عربي</button>
+      <a href="https://wa.me/97143464290" target="_blank" class="nav-wa">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge">
+      <span class="dot"></span>
+      <span data-en="Dubai's Premier Mobile Shop" data-ar="أفضل محل موبايل في دبي">Dubai's Premier Mobile Shop</span>
+    </div>
+    <h1 class="hero-title" id="heroTitle">
+      <span data-en="Everything Mobile." data-ar=".كل شيء موبايل">Everything Mobile.</span><br/>
+      <span class="accent" data-en="All In One Place." data-ar=".في مكان واحد">All In One Place.</span>
+    </h1>
+    <p class="hero-subtitle" id="heroSubtitle"
+       data-en="Premium smartphones, accessories &amp; expert repair services in Bur Dubai. Open daily from 10 AM."
+       data-ar="أحدث الهواتف الذكية والإكسسوارات وخدمات الإصلاح الاحترافية في بر دبي. مفتوح يومياً من 10 صباحاً.">
+      Premium smartphones, accessories &amp; expert repair services in Bur Dubai. Open daily from 10 AM.
+    </p>
+    <div class="hero-ctas" id="heroCtas">
+      <a href="https://wa.me/97143464290" target="_blank" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="Chat on WhatsApp" data-ar="تواصل عبر واتساب">Chat on WhatsApp</span>
+      </a>
+      <a href="tel:+97143464290" class="btn btn-glass">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span data-en="Call Now" data-ar="اتصل الآن">Call Now</span>
+      </a>
+      <a href="https://www.google.com/maps?cid=738020527817534446" target="_blank" class="btn btn-glass">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span data-en="Get Directions" data-ar="الاتجاهات">Get Directions</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll" id="heroScroll">
+    <span data-en="Scroll" data-ar="مرر">Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PRODUCTS
+════════════════════════════════════════ -->
+<section class="section products" id="products">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="badge" data-en="What We Offer" data-ar="ماذا نقدم">What We Offer</div>
+      <h2 class="heading" data-en="Everything You Need" data-ar="كل ما تحتاجه">Everything You Need</h2>
+      <div class="divider"></div>
+      <p class="subheading"
+         data-en="From the latest flagships to everyday essentials — all under one roof."
+         data-ar="من أحدث الهواتف إلى الإكسسوارات اليومية — كل شيء في مكان واحد.">
+        From the latest flagships to everyday essentials — all under one roof.
+      </p>
+    </div>
+
+    <div class="categories-grid" id="categoriesGrid">
+      <div class="cat-card">
+        <div class="cat-icon">📱</div>
+        <div class="cat-name" data-en="Smartphones" data-ar="الهواتف الذكية">Smartphones</div>
+        <div class="cat-desc"
+             data-en="New &amp; used phones from all major brands"
+             data-ar="هواتف جديدة ومستعملة من جميع الماركات">
+          New &amp; used phones from all major brands
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🎧</div>
+        <div class="cat-name" data-en="Accessories" data-ar="الإكسسوارات">Accessories</div>
+        <div class="cat-desc"
+             data-en="Cases, chargers, earphones, power banks &amp; more"
+             data-ar="كفرات وشواحن وسماعات وبطاريات محمولة والمزيد">
+          Cases, chargers, earphones, power banks &amp; more
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💻</div>
+        <div class="cat-name" data-en="Tablets" data-ar="الأجهزة اللوحية">Tablets</div>
+        <div class="cat-desc"
+             data-en="iPad, Samsung Galaxy Tab &amp; more"
+             data-ar="آيباد وسامسونج جالاكسي تاب والمزيد">
+          iPad, Samsung Galaxy Tab &amp; more
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">⌚</div>
+        <div class="cat-name" data-en="Smartwatches" data-ar="الساعات الذكية">Smartwatches</div>
+        <div class="cat-desc"
+             data-en="Wearables for every lifestyle and budget"
+             data-ar="ساعات ذكية لكل أسلوب حياة وميزانية">
+          Wearables for every lifestyle and budget
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🎮</div>
+        <div class="cat-name" data-en="Gaming" data-ar="الألعاب">Gaming</div>
+        <div class="cat-desc"
+             data-en="PS5, gaming consoles &amp; accessories"
+             data-ar="PS5 وأجهزة الألعاب والإكسسوارات">
+          PS5, gaming consoles &amp; accessories
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📶</div>
+        <div class="cat-name" data-en="SIM &amp; Recharge" data-ar="شرائح الاتصال">SIM &amp; Recharge</div>
+        <div class="cat-desc"
+             data-en="Local SIM cards &amp; recharge top-ups"
+             data-ar="شرائح SIM المحلية وبطاقات الشحن">
+          Local SIM cards &amp; recharge top-ups
+        </div>
+      </div>
+    </div>
+
+    <div class="brands-section">
+      <div class="brands-title" data-en="Top Brands We Carry" data-ar="أبرز الماركات لدينا">Top Brands We Carry</div>
+      <div class="brands-row">
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/apple/1D1D1F" alt="Apple" />
+          <span>Apple</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/samsung/1428A0" alt="Samsung" />
+          <span>Samsung</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/huawei/CF0A2C" alt="Huawei" />
+          <span>Huawei</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/xiaomi/FF6900" alt="Xiaomi" />
+          <span>Xiaomi</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/oppo/1D1D1F" alt="OPPO" />
+          <span>OPPO</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/vivo/415FFF" alt="Vivo" />
+          <span>Vivo</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/oneplus/F5010C" alt="OnePlus" />
+          <span>OnePlus</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/motorola/E1140A" alt="Motorola" />
+          <span>Motorola</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/sony/000000" alt="Sony" />
+          <span>Sony</span>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.simpleicons.org/nokia/124191" alt="Nokia" />
+          <span>Nokia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+════════════════════════════════════════ -->
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="badge" data-en="Expert Care" data-ar="رعاية احترافية">Expert Care</div>
+      <h2 class="heading" data-en="Professional Services" data-ar="خدمات احترافية">Professional Services</h2>
+      <div class="divider"></div>
+      <p class="subheading"
+         data-en="Trusted repair and support for all your devices."
+         data-ar="إصلاح ودعم موثوق لجميع أجهزتك.">
+        Trusted repair and support for all your devices.
+      </p>
+    </div>
+    <div class="services-grid" id="servicesGrid">
+      <div class="svc-card">
+        <div class="svc-icon">🔧</div>
+        <div class="svc-name" data-en="Screen Replacement" data-ar="تبديل الشاشة">Screen Replacement</div>
+        <div class="svc-desc"
+             data-en="Cracked or broken screen? We fix it fast with high-quality parts."
+             data-ar="شاشة مكسورة؟ نصلحها بسرعة بقطع عالية الجودة.">
+          Cracked or broken screen? We fix it fast with high-quality parts.
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔋</div>
+        <div class="svc-name" data-en="Battery Replacement" data-ar="تبديل البطارية">Battery Replacement</div>
+        <div class="svc-desc"
+             data-en="Restore your phone's battery life and performance in minutes."
+             data-ar="استعد عمر بطاريتك وأداء هاتفك في دقائق.">
+          Restore your phone's battery life and performance in minutes.
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛠️</div>
+        <div class="svc-name" data-en="Phone Repair" data-ar="إصلاح الهاتف">Phone Repair</div>
+        <div class="svc-desc"
+             data-en="Comprehensive repair services for all major brands and models."
+             data-ar="خدمات إصلاح شاملة لجميع الماركات والموديلات الكبرى.">
+          Comprehensive repair services for all major brands and models.
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔓</div>
+        <div class="svc-name" data-en="Software Unlock" data-ar="فك القفل">Software Unlock</div>
+        <div class="svc-desc"
+             data-en="Unlock your device to use with any carrier worldwide."
+             data-ar="افتح جهازك لاستخدامه مع أي شبكة حول العالم.">
+          Unlock your device to use with any carrier worldwide.
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📲</div>
+        <div class="svc-name" data-en="Data Transfer" data-ar="نقل البيانات">Data Transfer</div>
+        <div class="svc-desc"
+             data-en="Safely migrate all your contacts, photos, and apps to your new phone."
+             data-ar="انقل جهات الاتصال والصور والتطبيقات بأمان إلى هاتفك الجديد.">
+          Safely migrate all your contacts, photos, and apps to your new phone.
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💰</div>
+        <div class="svc-name" data-en="Buy &amp; Sell Used Phones" data-ar="شراء وبيع الهواتف">Buy &amp; Sell Used Phones</div>
+        <div class="svc-desc"
+             data-en="Get the best value for your used device or find a great deal."
+             data-ar="احصل على أفضل قيمة لجهازك المستعمل أو اعثر على صفقة رائعة.">
+          Get the best value for your used device or find a great deal.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-text" id="aboutText">
+        <div class="badge" data-en="Our Story" data-ar="قصتنا">Our Story</div>
+        <h2 class="heading" data-en="Trusted Since 2023" data-ar="موثوق منذ 2023">Trusted Since 2023</h2>
+        <p class="about-desc"
+           data-en="Located in the heart of Bur Dubai, Bait Shabib Mobile Phone has been serving the community with premium devices and exceptional service. We speak Arabic and English — and we make every customer feel at home."
+           data-ar="يقع بيت شبيب موبايل فون في قلب بر دبي، ويخدم المجتمع بأجهزة متميزة وخدمة استثنائية. نتحدث العربية والإنجليزية ونجعل كل عميل يشعر بالراحة.">
+          Located in the heart of Bur Dubai, Bait Shabib Mobile Phone has been serving the community with premium devices and exceptional service. We speak Arabic and English — and we make every customer feel at home.
+        </p>
+        <div class="about-ctas">
+          <a href="https://wa.me/97143464290" target="_blank" class="btn btn-red">
+            <span data-en="Contact Us" data-ar="تواصل معنا">Contact Us</span>
+          </a>
+          <a href="https://www.google.com/maps?cid=738020527817534446" target="_blank" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.2);">
+            <span data-en="Find Us on Maps" data-ar="ابحث عنا على الخريطة">Find Us on Maps</span>
+          </a>
+        </div>
+      </div>
+      <div class="about-right" id="aboutRight">
+        <div class="shop-photos">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwercq7821Cr941aXUI9blWGDqVeMK4MgVbDEPi-U1URqc9nRsmvWyXbocIaz5LsO-R01_vKq9Jsr2wt_iDxsqRGuIt6TMoqKH6yaVokW2S8w-CuxtlPZrPrxnn8dr1JAMLnaNxaP=s680-w680-h510-rw" alt="Bait Shabib shop" loading="lazy" />
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepOAzvIe6Zti6saLFtYBanTa1QSGHolWl2Ubw_B-O64HgaXFry8v85EjXFuTXaVglwbvNMQqHv0s-4S3ahHEex7jOOYX1IpcGv1sUrGKK79m4dKemX47Wx7tZiPzlcVvC97suBjSQ=s680-w680-h510-rw" alt="Bait Shabib products" loading="lazy" />
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo_YrxTo0ziVfhuDG4VHyLlzvADXmU-L7UymdNSeVZNKDQ2YzUOypqZC4np5NCYbliSUQY9AYLnYOL2HAtfZSNv39gLcOIjh3QUz2YQxfMmFvlIKWAIYrxCNg87wW6PRNZl3IvtJw=s680-w680-h510-rw" alt="Bait Shabib store" loading="lazy" />
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">2023</span>
+            <span class="stat-label" data-en="Established" data-ar="تأسست">Established</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">500+</span>
+            <span class="stat-label" data-en="Happy Customers" data-ar="عميل سعيد">Happy Customers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">10+</span>
+            <span class="stat-label" data-en="Brands Available" data-ar="ماركة متاحة">Brands Available</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">7</span>
+            <span class="stat-label" data-en="Days a Week" data-ar="أيام في الأسبوع">Days a Week</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════ -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="badge" data-en="Google Reviews" data-ar="تقييمات جوجل">Google Reviews</div>
+      <h2 class="heading" data-en="What Our Customers Say" data-ar="ماذا يقول عملاؤنا">What Our Customers Say</h2>
+      <div class="divider"></div>
+      <p class="subheading"
+         data-en="Real reviews from real people — straight from Google."
+         data-ar="تقييمات حقيقية من أشخاص حقيقيين — مباشرة من جوجل.">
+        Real reviews from real people — straight from Google.
+      </p>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="review-card">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text" data-en="&ldquo;One of the best places to buy a phone! Rahoof is so helpful 🙏🏻&rdquo;"
+           data-ar="&ldquo;من أفضل الأماكن لشراء الهاتف! راهوف شخص مفيد جداً 🙏🏻&rdquo;">
+          &ldquo;One of the best places to buy a phone! Rahoof is so helpful 🙏🏻&rdquo;
+        </p>
+        <div class="reviewer">Ab Sam</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text"
+           data-en="&ldquo;Repaired my phone when everyone else said it can't be repaired! Reasonable price and quick service, 10/10&rdquo;"
+           data-ar="&ldquo;أصلح هاتفي بينما قال الجميع إنه لا يمكن إصلاحه! سعر معقول وخدمة سريعة، 10/10&rdquo;">
+          &ldquo;Repaired my phone when everyone else said it can&rsquo;t be repaired! Reasonable price and quick service, 10/10&rdquo;
+        </p>
+        <div class="reviewer">Ishaan Sharma</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text"
+           data-en="&ldquo;A shop where you can find the latest original phones. And they have excellent customer service.&rdquo;"
+           data-ar="&ldquo;محل تجد فيه أحدث الهواتف الأصلية. وخدمة عملاء ممتازة.&rdquo;">
+          &ldquo;A shop where you can find the latest original phones. And they have excellent customer service.&rdquo;
+        </p>
+        <div class="reviewer">جمال العامري</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://www.google.com/search?q=bait+shabib+mobiles#lrd=0x3e5f43395fbca1b9:0xa3df9c28582abee,1,,,,"
+         target="_blank" class="btn btn-outline">
+        <span data-en="See All Reviews on Google" data-ar="عرض جميع التقييمات على جوجل">See All Reviews on Google</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="badge" data-en="Find Us" data-ar="ابحث عنا">Find Us</div>
+      <h2 class="heading" data-en="Visit Our Store" data-ar="زر متجرنا">Visit Our Store</h2>
+      <div class="divider"></div>
+      <p class="subheading"
+         data-en="We&rsquo;re right here in Bur Dubai — come say hi."
+         data-ar="نحن هنا في بر دبي — تفضل بزيارتنا.">
+        We&rsquo;re right here in Bur Dubai — come say hi.
+      </p>
+    </div>
+    <div class="contact-inner" id="contactInner">
+      <div class="map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=25.259998,55.298982&z=17&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Bait Shabib Location">
+        </iframe>
+      </div>
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-card-label" data-en="Address" data-ar="العنوان">Address</div>
+          <div class="info-card-value"
+               data-en="Bur Dubai, DG Sharaf Exit 3 - 3rd St - Al Hamriya, Dubai, UAE"
+               data-ar="بر دبي، DG شرف مخرج 3 - الشارع 3 - الحمرية، دبي، الإمارات">
+            Bur Dubai, DG Sharaf Exit 3 - 3rd St - Al Hamriya, Dubai, UAE
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label" data-en="Phone" data-ar="الهاتف">Phone</div>
+          <div class="info-card-value">
+            <a href="tel:+97143464290">+971 4 346 4290</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label" data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</div>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span class="hours-day" data-en="Sat – Thu" data-ar="السبت – الخميس">Sat – Thu</span>
+              <span class="hours-time" data-en="10:00 AM – 12:00 AM" data-ar="10:00 ص – 12:00 ص">10:00 AM – 12:00 AM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day" data-en="Friday" data-ar="الجمعة">Friday</span>
+              <span class="hours-time" data-en="3:00 PM – 12:00 AM" data-ar="3:00 م – 12:00 ص">3:00 PM – 12:00 AM</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-ctas">
+          <a href="https://wa.me/97143464290" target="_blank" class="btn btn-wa" style="flex:1;justify-content:center;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+          </a>
+          <a href="tel:+97143464290" class="btn btn-dark" style="flex:1;justify-content:center;">
+            <span data-en="Call Now" data-ar="اتصل الآن">Call Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Bait Shabib" />
+          <span class="footer-logo-name" data-en="Bait Shabib Mobile Phone" data-ar="بيت شبيب موبايل فون">Bait Shabib Mobile Phone</span>
+        </div>
+        <p class="footer-tagline"
+           data-en="Everything Mobile. All In One Place. Your trusted mobile shop in Bur Dubai."
+           data-ar="كل شيء موبايل. في مكان واحد. متجرك الموثوق للموبايل في بر دبي.">
+          Everything Mobile. All In One Place. Your trusted mobile shop in Bur Dubai.
+        </p>
+        <div class="social-row">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/baitshabibmobilephone/" target="_blank" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/97143464290" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <!-- Phone -->
+          <a href="tel:+97143464290" class="social-btn" aria-label="Call">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</div>
+        <div class="footer-links">
+          <a href="#products" data-en="Products" data-ar="المنتجات">Products</a>
+          <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+          <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+          <a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+          <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</div>
+        <div class="footer-links">
+          <a href="tel:+97143464290">+971 4 346 4290</a>
+          <a href="https://wa.me/97143464290" target="_blank" data-en="WhatsApp" data-ar="واتساب">WhatsApp</a>
+          <a href="https://www.instagram.com/baitshabibmobilephone/" target="_blank">@baitshabibmobilephone</a>
+          <a href="https://www.google.com/maps?cid=738020527817534446" target="_blank" data-en="Find on Google Maps" data-ar="ابحث على خرائط جوجل">Find on Google Maps</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2024 Bait Shabib Mobile Phone. All rights reserved." data-ar="© 2024 بيت شبيب موبايل فون. جميع الحقوق محفوظة.">
+        © 2024 Bait Shabib Mobile Phone. All rights reserved.
+      </p>
+      <p data-en="Bur Dubai, UAE" data-ar="بر دبي، الإمارات">Bur Dubai, UAE</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script type="module">
+  import { animate } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+
+  /* ── Language ──────────────────────────── */
+  let lang = 'en';
+
+  function applyLang(l) {
+    lang = l;
+    const isAr = l === 'ar';
+    document.documentElement.lang = l;
+    document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+    document.body.style.fontFamily = isAr
+      ? "'Cairo', 'Segoe UI', sans-serif"
+      : "'Inter', -apple-system, BlinkMacSystemFont, sans-serif";
+
+    // Update all text nodes
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute(`data-${l}`);
+      if (text) el.textContent = text;
+    });
+
+    // Update innerHTML nodes (those with HTML entities)
+    document.querySelectorAll('[data-en*="&"], [data-ar*="&"]').forEach(el => {
+      const val = el.getAttribute(`data-${l}`);
+      if (val) el.innerHTML = val;
+    });
+
+    // Toggle buttons
+    document.getElementById('langBtn').textContent = isAr ? 'EN' : 'عربي';
+    document.getElementById('langBtnMobile').textContent = isAr ? 'EN' : 'عربي';
+  }
+
+  document.getElementById('langBtn').addEventListener('click', () => applyLang(lang === 'en' ? 'ar' : 'en'));
+  document.getElementById('langBtnMobile').addEventListener('click', () => {
+    applyLang(lang === 'en' ? 'ar' : 'en');
+    closeMobileMenu();
+  });
+
+  /* ── Mobile Menu ───────────────────────── */
+  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger  = document.getElementById('hamburger');
+  const closeMenu  = document.getElementById('closeMenu');
+
+  function openMobileMenu() { mobileMenu.classList.add('open'); }
+  function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+  hamburger.addEventListener('click', openMobileMenu);
+  closeMenu.addEventListener('click', closeMobileMenu);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+  /* ── Navbar scroll ─────────────────────── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  /* ── Hero entrance ─────────────────────── */
+  const ease = [0.22, 1, 0.36, 1];
+
+  animate('#heroBadge',    { opacity: [0,1], y: [-16,0] }, { duration: 0.7, delay: 0.2, easing: ease });
+  animate('#heroTitle',    { opacity: [0,1], y: [60,0]  }, { duration: 0.9, delay: 0.45, easing: ease });
+  animate('#heroSubtitle', { opacity: [0,1], y: [30,0]  }, { duration: 0.8, delay: 0.75, easing: ease });
+  animate('#heroCtas',     { opacity: [0,1], y: [20,0]  }, { duration: 0.7, delay: 1.0,  easing: ease });
+  animate('#heroScroll',   { opacity: [0,.6]            }, { duration: 0.6, delay: 1.5  });
+
+  /* ── Scroll-triggered animations (CSS transitions + IntersectionObserver) ── */
+  // Using native IntersectionObserver for reliability.
+  // Motion is used only for hero (above-fold) where it's guaranteed to run.
+
+  const EASING = 'cubic-bezier(0.22, 1, 0.36, 1)';
+
+  // Prepare an element for scroll animation — only hide if below the fold
+  function prepareAnim(el, delay = 0) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= window.innerHeight - 60) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(44px)';
+      el.style.transition = `opacity 0.75s ${EASING} ${delay}s, transform 0.75s ${EASING} ${delay}s`;
+    }
+  }
+
+  function reveal(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0) scale(1)';
+  }
+
+  // Observe a list of elements, revealing each when it enters viewport
+  function observeAll(els) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          reveal(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(el => obs.observe(el));
+  }
+
+  // Cards with stagger delay
+  function setupCards(selector, delayStep = 0.09) {
+    const cards = [...document.querySelectorAll(selector)];
+    cards.forEach((el, i) => prepareAnim(el, i * delayStep));
+    observeAll(cards);
+  }
+
+  // Single elements with slide from left/right
+  function prepareSlide(el, dir = 'up', delay = 0) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= window.innerHeight - 60) {
+      el.style.opacity = '0';
+      if (dir === 'left')  el.style.transform = 'translateX(-52px)';
+      else if (dir === 'right') el.style.transform = 'translateX(52px)';
+      else el.style.transform = 'translateY(40px)';
+      el.style.transition = `opacity 0.85s ${EASING} ${delay}s, transform 0.85s ${EASING} ${delay}s`;
+    }
+  }
+
+  // Section headers
+  document.querySelectorAll('.section-header').forEach(el => {
+    prepareAnim(el);
+    observeAll([el]);
+  });
+
+  // Product & service & review cards
+  setupCards('.cat-card',    0.07);
+  setupCards('.svc-card',    0.07);
+  setupCards('.review-card', 0.10);
+
+  // Brand cards
+  const brandCards = [...document.querySelectorAll('.brand-card')];
+  brandCards.forEach((el, i) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= window.innerHeight - 60) {
+      el.style.opacity = '0';
+      el.style.transform = 'scale(0.88) translateY(16px)';
+      el.style.transition = `opacity 0.5s ${EASING} ${i * 0.04}s, transform 0.5s ${EASING} ${i * 0.04}s`;
+    }
+  });
+  observeAll(brandCards);
+
+  // About — slide in from sides
+  const aboutText  = document.getElementById('aboutText');
+  const aboutRight = document.getElementById('aboutRight');
+  if (aboutText)  { prepareSlide(aboutText,  'left');  observeAll([aboutText]);  }
+  if (aboutRight) { prepareSlide(aboutRight, 'right'); observeAll([aboutRight]); }
+
+  // Contact columns
+  const contactInner = document.getElementById('contactInner');
+  if (contactInner) {
+    [...contactInner.children].forEach((child, i) => prepareAnim(child, i * 0.15));
+    observeAll([...contactInner.children]);
+  }
+
+  // Footer
+  const footerEl = document.querySelector('footer');
+  if (footerEl) { prepareAnim(footerEl); observeAll([footerEl]); }
+</script>
+
+</body>
+</html>
