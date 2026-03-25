@@ -102,15 +102,16 @@
       padding: 12px 0;
     }
     .navbar .wrap {
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
     .nav-logo {
-      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0; min-width: 0;
     }
-    .nav-logo img { width: 34px; height: 34px; object-fit: contain; border-radius: 8px; }
+    .nav-logo img { width: 34px; height: 34px; object-fit: contain; border-radius: 8px; flex-shrink: 0; }
     .nav-logo-name {
       font-size: 15px; font-weight: 700;
       color: #fff; transition: color .4s;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .navbar.scrolled .nav-logo-name { color: var(--dark); }
 
@@ -146,7 +147,13 @@
     }
     .nav-wa:hover { background: #1fb85a; transform: translateY(-1px); }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; width: 44px; height: 44px; border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .hamburger:hover { background: rgba(255,255,255,.08); }
+    .navbar.scrolled .hamburger:hover { background: var(--light); }
     .hamburger span {
       display: block; width: 22px; height: 2px;
       background: #fff; border-radius: 2px; transition: all .3s;
@@ -156,23 +163,28 @@
     /* mobile nav */
     .mobile-menu {
       display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(10,10,10,.97); z-index: 999;
-      flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      background: rgba(10,10,10,.97); z-index: 1001;
+      flex-direction: column; align-items: center; justify-content: center; gap: 28px;
     }
     .mobile-menu.open { display: flex; }
     .mobile-menu a {
-      font-size: 28px; font-weight: 700; color: #fff; transition: color .2s;
+      font-size: 26px; font-weight: 700; color: #fff; transition: color .2s;
     }
     .mobile-menu a:hover { color: var(--red); }
     .mobile-menu .close-btn {
-      position: absolute; top: 24px; right: 28px;
-      font-size: 32px; color: #fff; background: none;
+      position: absolute; top: 20px; inset-inline-end: 24px;
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; color: rgba(255,255,255,.7); border-radius: 50%;
+      transition: background .2s, color .2s;
     }
+    .mobile-menu .close-btn:hover { background: rgba(255,255,255,.1); color: #fff; }
     .mobile-menu .lang-btn-mobile {
-      font-size: 16px; font-weight: 700;
-      padding: 10px 24px; border-radius: 100px;
+      font-size: 15px; font-weight: 700;
+      padding: 10px 28px; border-radius: 100px;
       border: 1.5px solid rgba(255,255,255,.3); color: #fff;
+      transition: background .2s;
     }
+    .mobile-menu .lang-btn-mobile:hover { background: rgba(255,255,255,.1); }
 
     /* ─── Hero ─── */
     .hero {
@@ -481,9 +493,11 @@
       .section-header { margin-bottom: 48px; }
 
       /* Nav */
+      .navbar .wrap { gap: 8px; }
       .nav-links { display: none; }
       .nav-wa   { display: none; }
       .hamburger { display: flex; }
+      .mobile-menu a { font-size: 26px; }
 
       /* Grids */
       .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -511,13 +525,22 @@
       .section { padding: 64px 0; }
       .section-header { margin-bottom: 36px; }
 
+      /* Nav */
+      .navbar { padding: 10px 0; }
+      .navbar.scrolled { padding: 8px 0; }
+      .navbar .wrap { gap: 4px; }
+      .lang-btn { padding: 6px 12px; font-size: 12px; }
+      .mobile-menu a { font-size: 22px; }
+      .mobile-menu { gap: 22px; }
+
       /* Hero */
       .hero-content { padding: 0 16px; }
       .hero-badge { font-size: 10px; padding: 6px 14px; margin-bottom: 20px; }
       .hero-title { font-size: 40px; letter-spacing: -.02em; margin-bottom: 16px; }
       .hero-subtitle { font-size: 15px; margin-bottom: 32px; }
-      .hero-ctas { flex-direction: column; align-items: stretch; gap: 10px; }
-      .hero-ctas .btn { justify-content: center; width: 100%; }
+      .hero-ctas { flex-direction: row; flex-wrap: wrap; gap: 10px; }
+      .hero-ctas .btn:first-child { width: 100%; justify-content: center; }
+      .hero-ctas .btn:not(:first-child) { flex: 1; justify-content: center; min-width: 0; }
       .hero-scroll { display: none; }
 
       /* Grids → single column */
